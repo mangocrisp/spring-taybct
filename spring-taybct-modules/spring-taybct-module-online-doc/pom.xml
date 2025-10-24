@@ -5,17 +5,26 @@
     <parent>
         <groupId>io.github.mangocrisp</groupId>
         <artifactId>spring-taybct-modules</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.5-final</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.mangocrisp</groupId>
     <artifactId>spring-taybct-module-online-doc</artifactId>
-    <version>3.2.4</version>
+    <version>3.2.5-final</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>online-document 在线文档</description>
     <url>https://github.com/mangocrisp/spring-taybct</url>
+
+    <distributionManagement>
+        <relocation>
+            <groupId>io.github.taybct</groupId>
+            <artifactId>${project.artifactId}</artifactId>
+            <version>3.5.0</version>
+            <message>This project has been relocated to io.github.taybct. Please update your dependencies.</message>
+        </relocation>
+    </distributionManagement>
 
     <licenses>
         <license>
@@ -62,13 +71,13 @@
         <dependency>
             <groupId>io.github.mangocrisp</groupId>
             <artifactId>spring-taybct-tool-launch</artifactId>
-            <version>${project.version}</version>
+            <version>${spring-taybct-tools.version}</version>
         </dependency>
         <!--微服务依赖-->
         <dependency>
             <groupId>io.github.mangocrisp</groupId>
             <artifactId>spring-taybct-tool-cloud</artifactId>
-            <version>${project.version}</version>
+            <version>${spring-taybct-tools.version}</version>
             <optional>true</optional>
             <scope>provided</scope>
         </dependency>
@@ -144,14 +153,14 @@
         <dependency>
             <groupId>io.github.mangocrisp</groupId>
             <artifactId>spring-taybct-tool-security</artifactId>
-            <version>${project.version}</version>
+            <version>${spring-taybct-tools.version}</version>
         </dependency>
 
         <!--对象存储工具-->
         <dependency>
             <groupId>io.github.mangocrisp</groupId>
             <artifactId>spring-taybct-tool-file</artifactId>
-            <version>${project.version}</version>
+            <version>${spring-taybct-tools.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>bcprov-jdk15on</artifactId>

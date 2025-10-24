@@ -11,11 +11,20 @@
 
     <groupId>io.github.mangocrisp</groupId>
     <artifactId>spring-taybct-dependencies</artifactId>
-    <version>3.2.4</version>
+    <version>3.2.5-final</version>
     <name>Spring TayBct</name>
     <description>Spring TayBct</description>
     <url>https://github.com/mangocrisp/spring-taybct</url>
     <packaging>pom</packaging>
+
+    <distributionManagement>
+        <relocation>
+            <groupId>io.github.taybct</groupId>
+            <artifactId>spring-taybct-dependencies</artifactId>
+            <version>3.5.0</version>
+            <message>This project has been relocated to io.github.taybct. Please update your dependencies.</message>
+        </relocation>
+    </distributionManagement>
 
     <licenses>
         <license>
@@ -57,7 +66,7 @@
         <!--Gpg Signature 插件-->
         <maven-gpg-plugin.version>3.2.5</maven-gpg-plugin.version>
         <!--平台版本-->
-        <project.version>3.2.4</project.version>
+        <project.version>3.2.5-final</project.version>
     </properties>
 
     <dependencyManagement>
